@@ -3,95 +3,71 @@
 /*Write selector/rule property to add your border when
 links in the navigation are in the hover or focus state.*/
 nav li :hover {
-     border: dotted 2px purple;
-}
-
-nav li :focus {
-     border: dotted 2px purple;
+    border: dotted 2px purple;
 }
 
 /*Write selector/rule property to position the default position for the skip class element*/
-.body {
-     position: relative;
+header {
+    position: relative;
 }
 
 .skip a{
-     position: absolute;
-     top: -65px;
+    position: absolute;
+    top: -65px;
 }
 
 /*Write selector/rule property to position the skip class element when it is in focus*/
 .skip a:focus{
-     position: absolute;
-     top: 25px;
-     border: dashed 5px green;
+    position: absolute;
+    top: 25px;
+    border: dashed 5px green;
 }
 
 /*Write selector/rule property to style all elements when in focus*/
-.container :focus {
-     border: dashed 5px green;
+.container a:focus {
+    border: dashed 5px green;
 }
-
 
 /*Write selector/rule property to style the container */
 .container {
-     display: grid;
-     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-     gap: 13px;
-     align-items: center;
-     height: max-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 13px;
 }
 
 /*Write selector/rule property to add the background image to the first div in the grid and place it in the grid. */
-.overview {
-     background-image: url("../images/header.jpg");
-     grid-row-start: 1;
-     grid-column-start: 1;
-     grid-row-end: 1;
-     grid-column-end: 6;
+div:first-child {
+    background-image: url("../images/header.jpg");
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 5;
 }
 
 /* Steps 6 and 7: Write the selector/rule properties to  place the next five elements in the next
  five rows in the grid. */
 
       /*This will be a lot of rules.... but be strategic and combine selectors*/
-
 .accounts {
-     grid-column: 2 / span 3;
-     grid-row: 2 / span 1;
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 1;
 }
 
 .accounts-image {
-     grid-row-start: 2;
-     grid-column-start: 1;
-     grid-row-end: 2;
-     grid-column-end: 6;
-     z-index: -1;
-     max-height: 675px;
-}
-
-.accounts-image img{
-     height: 100%;
-     width: 100%;
+    grid-column: 1 / span 5;
+    grid-row: 2 / span 1;
+    z-index: -1;
+    max-height: 675px;
 }
 
 .onlinebanking {
-     grid-column: 2 / span 3;
-     grid-row: 3 / span 1;
+    grid-column: 2 / span 3;
+    grid-row: 3 / span 1;
 }
 
 .onlinebanking-image {
-     grid-row-start: 3;
-     grid-column-start: 1;
-     grid-row-end: 3;
-     grid-column-end: 6;
-     z-index: -1;
-     max-height: 675px;
-}
-
-.onlinebanking-image img {
-     height: 100%;
-     width: 100%;
+    grid-column: 1 / span 5;
+    grid-row: 3 / span 1;
+    z-index: -1;
+    max-height: 675px;
 }
 
 .security {
@@ -100,73 +76,55 @@ nav li :focus {
 }
 
 .security-image {
-     grid-row-start: 4;
-     grid-column-start: 1;
-     grid-row-end: 4;
-     grid-column-end: 6;
-     z-index: -1;
-     max-height: 675px;
-}
-
-.security-image img {
-     height: 100%;
-     width: 100%;
+    grid-column: 1 / span 5;
+    grid-row: 4 / span 1;
+    z-index: -1;
+    max-height: 675px;
 }
 
 .loans {
-     grid-column: 2 / span 3;
-     grid-row: 5 / span 1;
+    grid-column: 2 / span 3;
+    grid-row: 5 / span 1;
 }
 
 .loans-image {
-     grid-row-start: 5;
-     grid-column-start: 1;
-     grid-row-end: 5;
-     grid-column-end: 6;
-     z-index: -1;
-     max-height: 675px;
-}
-
-.loans-image img {
-     height: 100%;
-     width: 100%;
+    grid-column: 1 / span 5;
+    grid-row: 5 / span 1;
+    z-index: -1;
+    max-height: 675px;
 }
 
 .contact {
-     grid-column: 2 / span 3;
-     grid-row: 6 / span 1;
+    grid-column: 2 / span 3;
+    grid-row: 6 / span 1;
 }
 
 .contact-image {
-     grid-row-start: 6;
-     grid-column-start: 1;
-     grid-row-end: 6;
-     grid-column-end: 6;
-     z-index: -1;
-     max-height: 675px;
+    grid-column: 1 / span 5;
+    grid-row: 6 / span 1;
+    z-index: -1;
+    max-height: 675px;
 }
 
-.contact-image img {
-     height: 100%;
-     width: 100%;
+img {
+    height: 100%;
+    width: 100%;
 }
 
-
- /* Step 8: Write the selector/rule property to style the .text-block class. */
+/* Step 8: Write the selector/rule property to style the .text-block class. */
 .text-block {
-     text-align: center;
-     height: max-content;
+    text-align: center;
+    height: max-content;
+    align-self: center;
 }
 
 .text-block li {
      text-align: left;
 }
 
-
 /* Add your media query here */
 @media screen and (min-width: 825px) {
-
-  /* Step 10: Write the selector/rule property to style the nav element */
+/* Step 10: Write the selector/rule property to style the nav element */
   nav {
      text-align: right;
      padding: 35px 0 35px 0;
@@ -180,9 +138,10 @@ nav li :focus {
   }
 
   /* Steps 12 - 15: Update the grid-column property of the grid's children (where-needed)*/
-  .overview {
+  div:first-child {
      grid-column: 1 / span 7;
   }
+
   .accounts {
      grid-column: 4 / span 3;
      grid-row: 2 / span 1;
@@ -194,11 +153,6 @@ nav li :focus {
      grid-row: 2 / span 1;
      z-index: -1;
      max-height: 675px;
-  }
-
-  .accounts-image img{
-     height: 100%;
-     width: 100%;
   }
 
   .onlinebanking {
@@ -213,28 +167,16 @@ nav li :focus {
      max-height: 675px;
   }
 
-  .onlinebanking-image img {
-     height: 100%;
-     width: 100%;
-  }
-
   .security {
      grid-column: 4 / span 3;
      grid-row: 4 / span 1;
   }
 
   .security-image {
-     grid-row-start: 4;
-     grid-column-start: 1;
-     grid-row-end: 4;
-     grid-column-end: 6;
+     grid-row: 4 / span 1;
+     grid-column: 1 span 5;
      z-index: -1;
      max-height: 675px;
-  }
-
-  .security-image img {
-     height: 100%;
-     width: 100%;
   }
 
   .loans {
@@ -246,13 +188,7 @@ nav li :focus {
      grid-column: 3 / span 5;
      grid-row: 5 / span 1;
      z-index: -1;
-     height: max-content;
      max-height: 675px;
-  }
-
-  .loans-image img {
-    height: 100%;
-    width: 100%;
   }
 
   .contact {
@@ -261,23 +197,20 @@ nav li :focus {
   }
 
   .contact-image {
-     grid-row-start: 6;
-     grid-column-start: 1;
-     grid-row-end: 6;
-     grid-column-end: 6;
+     grid-row: 6 / span 1;
+     grid-column: 1 / span 5;
      z-index: -1;
      max-height: 675px;
   }
 
-  .contact-image img {
-     height: 100%;
-     width: 100%;
+  img {
+    height: 100%;
+    width: 100%;
   }
 
  /* Step 16:Write the selector/rule property to update the .text-block class */
  .text-block{
-     max-height: 235px;
-     overflow: hidden;
+    max-height: 235px;
+    overflow: hidden;
   }
-
 }
